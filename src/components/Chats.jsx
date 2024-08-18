@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import userImage from "../assets/image.png";
 import carousel from "../assets/Agent.png";
 import arrow from "../assets/arrow.png";
 import reLoad from "../assets/reload.png";
 import copyImage from '../assets/copy.png';
 import downArrow from '../assets/downArrow.png';
-import ThumbsUpIcon from '../assets/svg/ThumbsUpIcon';
-import ThumbsDownIcon from '../assets/svg/ThumbsDownIcon';
+import { faThumbsUp } from '@fortawesome/free-solid-svg-icons';
+
 
 export default function Chats() {
     // State to manage input, chatBox visibility, and agentBox visibility
@@ -69,23 +69,24 @@ export default function Chats() {
 
                         <p>Ensure all invoices are accurate and processed on time. To get a detailed and specific list of exceptions, please ensure your data is updated on the Bot2do Platform. If you need further assistance, feel free to ask.</p>
 
-                        <div className="button-group">
-                            {/* <button type="button" className="btnIcon">
-                                <FontAwesomeIcon icon="fa-solid fa-thumbs-up" flip="horizontal" style={{ color: "red" }} />
-                            </button> */}
-                            <ThumbsUpIcon/>
-                            {/* <button type="button" className="btnIcon">
-                                <FontAwesomeIcon icon="fa-solid fa-thumbs-up" rotation={180} style={{ color: "#9ca3af" }} />
-                            </button> */}
-                            <ThumbsDownIcon/>
+                        <div className="button-group">                            
+                            <button type="button" className="btnIcon">
+                                <FontAwesomeIcon icon={faThumbsUp} flip="horizontal"style={{ color: "#9ca3af", fontSize: "20px" }} />
+                            </button>                            
+                            <button type="button" className="btnIcon">
+                                <FontAwesomeIcon icon={faThumbsUp} rotation={180} style={{ color: "#9ca3af", fontSize: "20px" }} />
+                            </button>
+
                             <button type="button" className="btnSave">
                                 Save
                                 <img src={copyImage} alt="Copy" />
                             </button>
+
                             <button type="button" className="btnForward">
                                 Forward all
                                 <img src={downArrow} alt="DownArrow" />
                             </button>
+
                             <button type="button" className="btnGen">
                                 Regenerate
                                 <img src={reLoad} alt="reLoad" />
